@@ -1,4 +1,4 @@
-NAME = claptrap
+NAME = scavtrap
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
@@ -6,7 +6,8 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 BUILD_DIR = build
 
 SRCS = main.cpp \
-	ClapTrap.cpp 
+	ClapTrap.cpp \
+	ScavTrap.cpp
 
 OBJS = $(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 DEPS = $(OBJS:.o=.d)

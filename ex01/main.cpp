@@ -14,5 +14,15 @@
 #include "ScavTrap.hpp"
 
 int main(void){
-	
+	std::cout << BLUE + "/------Robots Creation------/" + RESET << std::endl;
+	ScavTrap*	goldo = new ScavTrap("Goldorak");
+	ClapTrap* bob = new ScavTrap("BOB");
+	std::cout << BLUE + "/------Robots Actions------/" + RESET << std::endl;
+	goldo->guardGate();
+	goldo->attack(bob->getName());
+	bob->takeDamage(20);
+	bob->beRepaired(10);
+	std::cout << BLUE + "/------Robots Destruction------/" + RESET << std::endl;
+	delete bob;
+	delete goldo;
 }

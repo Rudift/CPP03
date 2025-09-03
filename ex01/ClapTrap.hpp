@@ -25,15 +25,18 @@
 			int			_attack;
 		public:
 			//Canonical
-			ClapTrap(std::string name);
+			ClapTrap(std::string name, int hp, int ep, int attack);
 			ClapTrap(const ClapTrap& other);
 			ClapTrap&	operator=(const ClapTrap& other);
-			~ClapTrap();
+			virtual ~ClapTrap();
 
 			//Member fonctions
 			void	attack(const std::string& target);
 			void	takeDamage(unsigned int amount);
 			void	beRepaired(unsigned int amount);
+
+			//Accesseurs
+			std::string getName() const;
 	};
 	
 #endif

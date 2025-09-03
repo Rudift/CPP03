@@ -13,8 +13,8 @@
 #include "ClapTrap.hpp"
 
 //Default Constructor
-ClapTrap::ClapTrap(std::string name):_name(name), _hp(10), _ep(10), _attack(0){
-	std::cout << YELLOW + _name + " is created by the Puppet Master" << RESET << std::endl;
+ClapTrap::ClapTrap(std::string name, int hp = 10, int ep = 10, int attack = 0): _name(name), _hp(hp), _ep(ep), _attack(attack){
+	std::cout << YELLOW + _name + " ClapTrap unit is created" << RESET << std::endl;
 }
 
 //Copy Constructor
@@ -37,7 +37,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& other){
 }
 //Destructor
 ClapTrap::~ClapTrap(void){
-	std::cout << RED + _name + " is destroyed" << RESET << std::endl;
+	std::cout << RED + _name + " ClapTrap unit is destroyed" << RESET << std::endl;
 	return ;
 }
 
@@ -68,4 +68,8 @@ void	ClapTrap::beRepaired(unsigned int amount){
 		std::cout << _name + " has no HP left" << std::endl;
 	else
 		std::cout << BRIGHT_BLUE + _name + " has not enough energy points to repare itself !" + RESET << std::endl;
+}
+
+std::string ClapTrap::getName() const{
+	return (_name);
 }
