@@ -13,12 +13,16 @@
 #include "ClapTrap.hpp"
 
 int main(void){
+	std::cout << RED + "WELCOME TO ROBOT TURBO OVERKILL !!!" + RESET << std::endl;
+	std::cout << BLUE + "/------CREATION OF THE BOTS------/" + RESET 	<< std::endl;
 	ClapTrap *optimus = new ClapTrap("Optimus Prime");
 	ClapTrap *megatron = new ClapTrap ("Megatron");
-	std::cout << RED + "WELCOME TO ROBOT TURBO OVERKILL !!!" + RESET << std::endl;
+	std::cout << BLUE + "/------FIGHT------/" + RESET << std::endl;
 	std::cout << YELLOW + "3...2...1..." + RED + "GOooooooooo!"+ RESET << std::endl;
 	optimus->attack("Megatron");
 	megatron->takeDamage(0);
+	megatron->beRepaired(0);
+	std::cout << BLUE + "/------DESTRUCTION OF THE BOTS------/" + RESET 	<< std::endl;
 	if (optimus)
 		delete optimus;
 	if (megatron)

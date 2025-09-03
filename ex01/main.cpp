@@ -11,17 +11,8 @@
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void){
-	ClapTrap *optimus = new ClapTrap("Optimus Prime");
-	ClapTrap *megatron = new ClapTrap ("Megatron");
-	std::cout << RED + "WELCOME TO ROBOT TURBO OVERKILL !!!" + RESET << std::endl;
-	std::cout << YELLOW + "3...2...1..." + RED + "GOooooooooo!"+ RESET << std::endl;
-	optimus->attack("Megatron");
-	megatron->takeDamage(0);
-	if (optimus)
-		delete optimus;
-	if (megatron)
-		delete megatron;
-	return (0);
+	
 }
