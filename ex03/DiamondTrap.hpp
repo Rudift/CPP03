@@ -23,6 +23,9 @@
 			DiamondTrap(const DiamondTrap& other);
 			DiamondTrap&	operator=(const DiamondTrap& other);
 			~DiamondTrap();
+
+			//Member fonction
+			void	whoAmI();
 	};
 
 #endif

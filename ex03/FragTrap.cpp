@@ -13,7 +13,10 @@
 #include "FragTrap.hpp"
 
 //Default constructor
-FragTrap::FragTrap(std::string name): ClapTrap(name, 100, 100, 30){
+FragTrap::FragTrap(std::string name): ClapTrap(name){
+	this->_hp = _initHP;
+	this->_ep = _initEP;
+	this->_attack = _initAtk;
 	std::cout << YELLOW + name + " FragTrap unit is created" << RESET << std::endl;
 }
 
@@ -34,3 +37,4 @@ FragTrap&	FragTrap::operator=(const FragTrap& other){
 FragTrap::~FragTrap(void){
 	std::cout << RED + getName() + " FragTrap unit is destroyed" << RESET << std::endl;
 }
+

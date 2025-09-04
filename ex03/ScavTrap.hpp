@@ -26,5 +26,10 @@
 
 			//Member fonction
 			void	guardGate();
+
+		protected :
+			static unsigned int const	_initHP = 100;
+			static unsigned int const	_initEP = 50;
+			static unsigned int const	_initAtk = 20;
 	};
 #endif

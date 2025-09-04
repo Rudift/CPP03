@@ -18,14 +18,15 @@
 
 	class ClapTrap
 	{
-		private:
-			std::string	_name;
-			int			_hp;
-			int			_ep;
-			int			_attack;
+		private :
+			static unsigned int const	_initHP = 10;
+			static unsigned int const	_initEP = 10;
+			static unsigned int const	_initAtk = 0;
+
+		
 		public:
 			//Canonical
-			ClapTrap(std::string name, int hp, int ep, int attack);
+			ClapTrap(std::string name);
 			ClapTrap(const ClapTrap& other);
 			ClapTrap&	operator=(const ClapTrap& other);
 			virtual ~ClapTrap();
@@ -37,6 +38,12 @@
 
 			//Accesseurs
 			std::string getName() const;
+		
+		protected :
+			std::string	_name;
+			unsigned int			_hp;
+			unsigned int			_ep;
+			unsigned int			_attack;
 	};
 	
 #endif

@@ -13,7 +13,10 @@
 #include "ScavTrap.hpp"
 
 //Default constructor
-ScavTrap::ScavTrap(std::string name): ClapTrap(name, 100, 50, 20){
+ScavTrap::ScavTrap(std::string name): ClapTrap(name){
+	this->_hp = _initHP;
+	this->_ep = _initEP;
+	this->attack = _initAtk;
 	std::cout << YELLOW + name + " ScavTrap unit is created" << RESET << std::endl;
 }
 

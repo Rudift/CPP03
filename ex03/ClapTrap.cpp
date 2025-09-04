@@ -13,7 +13,7 @@
 #include "ClapTrap.hpp"
 
 //Default Constructor
-ClapTrap::ClapTrap(std::string name, int hp = 10, int ep = 10, int attack = 0): _name(name), _hp(hp), _ep(ep), _attack(attack){
+ClapTrap::ClapTrap(std::string name): _name(name), _hp(_initHP), _ep(_initEP), _attack(_initAtk){
 	std::cout << YELLOW + _name + " ClapTrap unit is created" << RESET << std::endl;
 }
 

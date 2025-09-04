@@ -33,5 +33,9 @@
 					<< " says : High five bro !" 
 					<< RESET << std::endl;
 			}
+		protected :
+			static unsigned int const	_initHP = 100;
+			static unsigned int const	_initEP = 100;
+			static unsigned int const	_initAtk = 30;
 	};
 #endif

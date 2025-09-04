@@ -13,10 +13,11 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void){
 	std::cout << BLUE + "/------Robots Creation------/" + RESET << std::endl;
-	FragTrap*	duke = new FragTrap("Duke Nukem");
+	DiamondTrap*	duke = new DiamondTrap("Duke Nukem");
 	std::cout << BLUE + "/------Robots Actions------/" + RESET << std::endl;
 	duke->highFivesGuys();
 	std::cout << BLUE + "/------Robots Destruction------/" + RESET << std::endl;
