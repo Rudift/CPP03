@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdeliere <vdeliere@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-09-03 13:27:25 by vdeliere          #+#    #+#             */
-/*   Updated: 2025-09-03 13:27:25 by vdeliere         ###   ########.fr       */
+/*   Created: 2025-09-04 10:10:29 by vdeliere          #+#    #+#             */
+/*   Updated: 2025-09-04 10:10:29 by vdeliere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 //Default constructor
-FragTrap::FragTrap(std::string name): ClapTrap(name, 100, 100, 30){
-	std::cout << YELLOW + name + " FragTrap unit is created" << RESET << std::endl;
+DiamondTrap::DiamondTrap(std::string name): ClapTrap( + "_clap_name"), {
+	std::cout << YELLOW + name + " DiamondTrap unit is created" << RESET << std::endl;
 }
 
 //Copy constructor
-FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other){
+DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other){
 	std::cout << YELLOW + getName() + " Fragtrap copy constructor called" << RESET << std::endl;
 }
 
 //Assignation operator
-FragTrap&	FragTrap::operator=(const FragTrap& other){
+DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& other){
 	if (this != &other) {
 		ClapTrap::operator=(other);
 	}
@@ -31,6 +31,6 @@ FragTrap&	FragTrap::operator=(const FragTrap& other){
 }
 
 //Destructor
-FragTrap::~FragTrap(void){
-	std::cout << RED + getName() + " FragTrap unit is destroyed" << RESET << std::endl;
+DiamondTrap::~DiamondTrap(void){
+	std::cout << RED + getName() + " DiamondTrap unit is destroyed" << RESET << std::endl;
 }
