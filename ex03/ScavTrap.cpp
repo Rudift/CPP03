@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name){
 
 //Copy constructor
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other){
-	std::cout << YELLOW + getName() + " ScavTrap copy constructor called" << RESET << std::endl;
+	std::cout << YELLOW + _name + " ScavTrap copy constructor called" << RESET << std::endl;
 }
 
 //Assignation operator
@@ -35,16 +35,16 @@ ScavTrap&	ScavTrap::operator=(const ScavTrap& other){
 
 //Destructor
 ScavTrap::~ScavTrap(void){
-	std::cout << RED + getName() + " ScavTrap unit is destroyed" << RESET << std::endl;
+	std::cout << RED + _name + " ScavTrap unit is destroyed" << RESET << std::endl;
 }
 
 void	ScavTrap::guardGate(){
-	std::cout << GREEN + getName() + " ScavTrap is now in Gate keeper mode" << RESET << std::endl;
+	std::cout << GREEN + _name + " ScavTrap is now in Gate keeper mode" << RESET << std::endl;
 }
 
 void	ScavTrap::attack(const std::string& target){
 	if (_ep > 0 && _hp > 0){
-		std::cout << RED + _name + " made a thunder attack " + target + " causing " + YELLOW <<_attack << RED + " points of damage !"<< RESET << std::endl;
+		std::cout << RED + _name + " made a thunder attack against " + target + " causing " + YELLOW <<_attack << RED + " points of damage !"<< RESET << std::endl;
 		_ep--;
 	}else if(_hp < 1)
 		std::cout << _name + " has no HP left" << std::endl;

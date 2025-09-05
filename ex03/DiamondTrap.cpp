@@ -18,13 +18,14 @@ DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), ScavT
 	this->_name = name;
 	this->_hp = FragTrap::_initHP;
 	this->_ep = ScavTrap::_initEP;
-	this->_attack = ScavTrap::_initAtk;
+	this->_attack = FragTrap::_initAtk;
 
 }
 
 //Copy constructor
-DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other){
-	std::cout << YELLOW + getName() + " Fragtrap copy constructor called" << RESET << std::endl;
+DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other), ScavTrap(other._name), FragTrap(other._name){
+	std::cout << YELLOW + _name + " DiamondTrap copy constructor called" << RESET << std::endl;
+	this->_name = other._name;
 }
 
 //Assignation operator
@@ -37,9 +38,24 @@ DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& other){
 
 //Destructor
 DiamondTrap::~DiamondTrap(void){
-	std::cout << RED + getName() + " DiamondTrap unit is destroyed" << RESET << std::endl;
+	std::cout << RED + _name + " DiamondTrap unit is destroyed" << RESET << std::endl;
 }
 
-void	whoAmI(){
+void	DiamondTrap::whoAmI()const {
+	std::cout << GREEN << "My name is " << this->_name 
+		<< " and my ClapTrap name is " << ClapTrap::getName() 
+		<< RESET << std::endl;
+}
 
+unsigned int	DiamondTrap::getAttack()const {
+	return (_attack);
+}
+
+void 	DiamondTrap::displayStats()const{
+	std::cout 
+		<< "---Stat of " + _name +" ---\n"
+		<< "HP : " << _hp << "\n"
+		<< "EP : " << _ep << "\n"
+		<<	"Attack damage : " << _attack
+		<< std::endl;
 }

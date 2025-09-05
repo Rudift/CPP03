@@ -17,12 +17,12 @@ FragTrap::FragTrap(std::string name): ClapTrap(name){
 	this->_hp = _initHP;
 	this->_ep = _initEP;
 	this->_attack = _initAtk;
-	std::cout << YELLOW + name + " FragTrap unit is created" << RESET << std::endl;
+	std::cout << YELLOW + _name + " FragTrap unit is created" << RESET << std::endl;
 }
 
 //Copy constructor
 FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other){
-	std::cout << YELLOW + getName() + " Fragtrap copy constructor called" << RESET << std::endl;
+	std::cout << YELLOW + _name + " Fragtrap copy constructor called" << RESET << std::endl;
 }
 
 //Assignation operator
@@ -35,6 +35,6 @@ FragTrap&	FragTrap::operator=(const FragTrap& other){
 
 //Destructor
 FragTrap::~FragTrap(void){
-	std::cout << RED + getName() + " FragTrap unit is destroyed" << RESET << std::endl;
+	std::cout << RED + _name + " FragTrap unit is destroyed" << RESET << std::endl;
 }
 

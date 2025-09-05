@@ -16,7 +16,7 @@
 #  include "FragTrap.hpp"
 	class DiamondTrap : public ScavTrap, public FragTrap{
 		private :
-
+			std::string	_name;
 		public :
 			//Cononical
 			DiamondTrap(std::string name);
@@ -25,7 +25,9 @@
 			~DiamondTrap();
 
 			//Member fonction
-			void	whoAmI();
+			void			whoAmI() const;
+			unsigned int	getAttack()const;
+			void			displayStats()const;
 	};
 
 #endif

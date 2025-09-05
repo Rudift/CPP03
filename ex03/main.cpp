@@ -16,10 +16,17 @@
 #include "DiamondTrap.hpp"
 
 int main(void){
-	std::cout << BLUE + "/------Robots Creation------/" + RESET << std::endl;
-	DiamondTrap*	duke = new DiamondTrap("Duke Nukem");
+	std::cout << BLUE + "/------Robots Creation------/" +RESET << std::endl;
+	DiamondTrap*	franky = new DiamondTrap("Frankenstein");
 	std::cout << BLUE + "/------Robots Actions------/" + RESET << std::endl;
-	duke->highFivesGuys();
+	franky->displayStats();
+	franky->guardGate();
+	franky->whoAmI();
+	franky->attack(" itself");
+	franky->takeDamage(franky->getAttack());
+	franky->beRepaired(10);
+	franky->highFivesGuys();
+	franky->displayStats();
 	std::cout << BLUE + "/------Robots Destruction------/" + RESET << std::endl;
-	delete duke;
+	delete	franky;
 }

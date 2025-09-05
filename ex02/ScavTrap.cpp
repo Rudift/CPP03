@@ -41,7 +41,7 @@ void	ScavTrap::guardGate(){
 
 void	ScavTrap::attack(const std::string& target){
 	if (_ep > 0 && _hp > 0){
-		std::cout << RED + _name + " made a thunder attack " + target + " causing " + YELLOW <<_attack << RED + " points of damage !"<< RESET << std::endl;
+		std::cout << RED + _name + " made a thunder attack against " + target + " causing " + YELLOW <<_attack << RED + " points of damage !"<< RESET << std::endl;
 		_ep--;
 	}else if(_hp < 1)
 		std::cout << _name + " has no HP left" << std::endl;
