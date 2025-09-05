@@ -16,7 +16,7 @@
 ScavTrap::ScavTrap(std::string name): ClapTrap(name){
 	this->_hp = _initHP;
 	this->_ep = _initEP;
-	this->attack = _initAtk;
+	this->_attack = _initAtk;
 	std::cout << YELLOW + name + " ScavTrap unit is created" << RESET << std::endl;
 }
 
@@ -40,4 +40,14 @@ ScavTrap::~ScavTrap(void){
 
 void	ScavTrap::guardGate(){
 	std::cout << GREEN + getName() + " ScavTrap is now in Gate keeper mode" << RESET << std::endl;
+}
+
+void	ScavTrap::attack(const std::string& target){
+	if (_ep > 0 && _hp > 0){
+		std::cout << RED + _name + " made a thunder attack " + target + " causing " + YELLOW <<_attack << RED + " points of damage !"<< RESET << std::endl;
+		_ep--;
+	}else if(_hp < 1)
+		std::cout << _name + " has no HP left" << std::endl;
+	else
+		std::cout << BRIGHT_BLUE + _name + " has not enough energy points to attack !" + RESET << std::endl;
 }

@@ -25,6 +25,7 @@
 			~ScavTrap();
 
 			//Member fonction
-			void	guardGate();
+			virtual void	attack(const std::string& target);
+			void			guardGate();
 	};
 #endif

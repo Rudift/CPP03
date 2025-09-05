@@ -18,7 +18,7 @@
 
 	class ClapTrap
 	{
-		private:
+		protected:
 			std::string	_name;
 			int			_hp;
 			int			_ep;
@@ -31,9 +31,9 @@
 			virtual ~ClapTrap();
 
 			//Member fonctions
-			void	attack(const std::string& target);
-			void	takeDamage(unsigned int amount);
-			void	beRepaired(unsigned int amount);
+			virtual void	attack(const std::string& target);
+			void			takeDamage(unsigned int amount);
+			void			beRepaired(unsigned int amount);
 
 			//Accesseurs
 			std::string getName() const;

@@ -22,6 +22,8 @@ int main(void){
 	goldo->attack(bob->getName());
 	bob->takeDamage(20);
 	bob->beRepaired(10);
+	bob->attack(goldo->getName());
+	goldo->takeDamage(0);
 	std::cout << BLUE + "/------Robots Destruction------/" + RESET << std::endl;
 	delete bob;
 	delete goldo;

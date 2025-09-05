@@ -25,7 +25,8 @@
 			~ScavTrap();
 
 			//Member fonction
-			void	guardGate();
+			void			guardGate();
+			virtual void	attack(const std::string& target);
 
 		protected :
 			static unsigned int const	_initHP = 100;
