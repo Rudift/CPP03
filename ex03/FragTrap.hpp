@@ -26,13 +26,8 @@
 			~FragTrap();
 
 			//Member fonction
-			void	highFivesGuys(void){
-				std::cout 
-					<< GREEN
-					<< this->getName()
-					<< " says : High five bro !" 
-					<< RESET << std::endl;
-			}
+			void	highFivesGuys(void)const;
+
 		protected :
 			static unsigned int const	_initHP = 100;
 			static unsigned int const	_initEP = 100;

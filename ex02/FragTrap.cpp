@@ -34,3 +34,11 @@ FragTrap&	FragTrap::operator=(const FragTrap& other){
 FragTrap::~FragTrap(void){
 	std::cout << RED + getName() + " FragTrap unit is destroyed" << RESET << std::endl;
 }
+
+void	FragTrap::highFivesGuys(void)const{
+	std::cout 
+		<< GREEN
+		<< this->getName()
+		<< " says : High five bro !" 
+		<< RESET << std::endl;
+}

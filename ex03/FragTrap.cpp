@@ -38,3 +38,11 @@ FragTrap::~FragTrap(void){
 	std::cout << RED + _name + " FragTrap unit is destroyed" << RESET << std::endl;
 }
 
+void	FragTrap::highFivesGuys(void)const{
+	std::cout 
+		<< GREEN
+		<< this->getName()
+		<< " says : High five bro !" 
+		<< RESET << std::endl;
+}
+

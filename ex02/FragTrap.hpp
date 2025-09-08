@@ -26,12 +26,6 @@
 			~FragTrap();
 
 			//Member fonction
-			void	highFivesGuys(void){
-				std::cout 
-					<< GREEN
-					<< this->getName()
-					<< " says : High five bro !" 
-					<< RESET << std::endl;
-			}
+			void	highFivesGuys(void)const;
 	};
 #endif
